@@ -3,6 +3,7 @@ package com.rohil.rohilshahdemo.trading.usecase
 import com.rohil.network1.vo.StockDataVO
 import org.junit.Before
 import org.junit.Test
+import kotlin.system.measureTimeMillis
 
 class TradingUseCaseTest {
 
@@ -185,6 +186,7 @@ class TradingUseCaseTest {
     }
 
     /**
+     * --------------------------------------------------------------------------
      * TEST calculateTodaysPnL
      */
 
@@ -260,5 +262,26 @@ class TradingUseCaseTest {
     fun `calculateTodaysPnL negative values should calculate correctly`() {
         val stocks = listOf(StockDataVO(quantity = -10, close = 120.0, ltp = 100.0))
         assert(usecase.calculateTodaysPnL(stocks) == -200.0)
+    }
+
+    /**
+     * --------------------------------------------------------------------------
+     * TEST large dataset
+     */
+
+
+    @Test
+    fun `calculateCurrentValue performance with large dataset`() {
+        val largeDataset = (1..100_000).map {
+            StockDataVO(quantity = 10, ltp = 100.0, avgPrice = 90.0, close = 95.0)
+        }
+
+        val time = measureTimeMillis {
+            val result = usecase.calculateCurrentValue(largeDataset)
+            assert(result == 100_000 * 10.0 * 100.0)
+        }
+
+        println("Execution time for 100k stocks: $time ms")
+        assert(time < 500) // arbitrary threshold
     }
 }
