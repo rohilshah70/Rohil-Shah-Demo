@@ -72,7 +72,7 @@ class TradingUseCase @Inject constructor() {
         return data
     }
 
-    private fun calculateCurrentValue(stocks: List<StockDataVO>?): Double? {
+    fun calculateCurrentValue(stocks: List<StockDataVO>?): Double? {
         return stocks?.map { stock ->
             val qty = stock.quantity ?: return null
             val ltp = stock.ltp ?: return null
@@ -81,7 +81,7 @@ class TradingUseCase @Inject constructor() {
             ?.roundTo2Decimal()
     }
 
-    private fun calculateTotalInvestment(stocks: List<StockDataVO>?): Double? {
+    fun calculateTotalInvestment(stocks: List<StockDataVO>?): Double? {
         return stocks?.map { stock ->
             val qty = stock.quantity ?: return null
             val avgPrice = stock.avgPrice ?: return null
@@ -90,12 +90,12 @@ class TradingUseCase @Inject constructor() {
             ?.roundTo2Decimal()
     }
 
-    private fun totalPnL(currentValue: Double?, totalInvestment: Double?): Double? {
+    fun totalPnL(currentValue: Double?, totalInvestment: Double?): Double? {
         if (currentValue == null || totalInvestment == null) return null
         return (currentValue - totalInvestment).roundTo2Decimal()
     }
 
-    private fun calculateTodaysPnL(stocks: List<StockDataVO>?): Double? {
+    fun calculateTodaysPnL(stocks: List<StockDataVO>?): Double? {
         return stocks?.map { stock ->
             val qty = stock.quantity ?: return null
             val close = stock.close ?: return null

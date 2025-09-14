@@ -38,16 +38,14 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    //    Ktor
+//    Ktor
     implementation(libs.ktor.client.core)
 //    HTTP engine: The HTTP client used to perform network requests.
     implementation(libs.ktor.client.okhttp)
 //    The serialization engine used to convert objects to and from JSON.
-    implementation(libs.ktor.client.serialization)
+    api(libs.ktor.client.serialization)
     implementation(libs.ktor.client.content.negotiation)
 //    Logging
     implementation(libs.ktor.client.logging)

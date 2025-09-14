@@ -59,7 +59,7 @@ sealed interface ApiResponse<T> {
         return this
     }
 
-    fun onFailure(block: (Exception) -> Unit): ApiResponse<T> {
+    suspend fun onFailure(block: suspend (Exception) -> Unit): ApiResponse<T> {
         if (this is Failure) block(exception)
         return this
     }
