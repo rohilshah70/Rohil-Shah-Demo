@@ -34,7 +34,7 @@ class DataStoreModule {
 
     @Provides
     @Singleton
-    fun provideZoomcarDataStore(dataStore: DataStore<Preferences>): IDataStore {
+    fun provideTradingDataStore(dataStore: DataStore<Preferences>): IDataStore {
         return TradingDataStore(dataStore)
     }
 }

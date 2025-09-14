@@ -10,13 +10,6 @@ import io.ktor.client.request.get
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-/**
- * @created 13/09/25 - 18:28
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 class KtorClient {
     private val client = HttpClient(OkHttp) {
         install(Logging) {

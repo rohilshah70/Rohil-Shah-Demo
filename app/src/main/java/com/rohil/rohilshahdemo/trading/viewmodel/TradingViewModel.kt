@@ -14,13 +14,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-/**
- * @created 12/09/25 - 23:19
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 @HiltViewModel
 class TradingViewModel @Inject constructor(
     private val repository: TradingRepository,

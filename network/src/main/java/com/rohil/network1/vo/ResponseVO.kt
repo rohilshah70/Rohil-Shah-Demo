@@ -3,13 +3,6 @@ package com.rohil.network1.vo
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-/**
- * @created 12/09/25 - 23:06
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 @Serializable
 data class ResponseVO(
     @SerialName("data")

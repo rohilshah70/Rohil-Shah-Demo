@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Rohil Shah Demo</string>
     <string name="rs_symbol">\u20B9</string>
-    <string name="toolbar_title">Upstox Holding</string>
+    <string name="toolbar_title">Portfolio</string>
     <string name="ltp">LTP: </string>
     <string name="net_qty">NET QTY:</string>
     <string name="pl">P\u0026L:</string>

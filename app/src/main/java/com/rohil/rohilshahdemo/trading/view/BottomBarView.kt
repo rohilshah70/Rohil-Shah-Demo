@@ -30,13 +30,6 @@ import androidx.compose.ui.unit.sp
 import com.rohil.rohilshahdemo.R
 import com.rohil.rohilshahdemo.trading.BottomBarUIVO
 
-/**
- * @created 13/09/25 - 20:57
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 @Composable
 fun BottomBarView(
     modifier: Modifier = Modifier,

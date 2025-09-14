@@ -9,13 +9,6 @@ import com.rohil.rohilshahdemo.trading.ResponseUIVO
 import com.rohil.rohilshahdemo.trading.StockUIVO
 import javax.inject.Inject
 
-/**
- * @created 13/09/25 - 00:10
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 class TradingUseCase @Inject constructor() {
 
     private val profitColor = Color(112, 155, 144)

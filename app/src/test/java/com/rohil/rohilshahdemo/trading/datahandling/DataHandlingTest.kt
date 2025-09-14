@@ -6,13 +6,6 @@ import com.rohil.rohilshahdemo.trading.usecase.TradingUseCase
 import org.junit.Before
 import org.junit.Test
 
-/**
- * @created 14/09/25 - 17:16
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 class DataHandlingTest {
     private lateinit var usecase: TradingUseCase
 

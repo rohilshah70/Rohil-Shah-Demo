@@ -19,7 +19,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
@@ -33,13 +32,6 @@ import com.rohil.rohilshahdemo.trading.viewmodel.TradingEvent
 import com.rohil.rohilshahdemo.trading.viewmodel.TradingViewModel
 import com.rohil.rohilshahdemo.R
 import com.rohil.rohilshahdemo.customShadow
-
-/**
- * @created 12/09/25 - 23:35
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
 
 @Composable
 fun TradingView(

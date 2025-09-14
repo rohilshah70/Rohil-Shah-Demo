@@ -2,13 +2,6 @@ package com.rohil.rohilshahdemo.trading
 
 import androidx.compose.ui.graphics.Color
 
-/**
- * @created 13/09/25 - 00:03
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 data class ResponseUIVO(
     val stockList: List<StockUIVO>? = null,
     val bottomBarData: BottomBarUIVO? = null

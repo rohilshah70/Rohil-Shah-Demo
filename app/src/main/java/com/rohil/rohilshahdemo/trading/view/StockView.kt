@@ -19,13 +19,6 @@ import androidx.compose.ui.unit.sp
 import com.rohil.rohilshahdemo.R
 import com.rohil.rohilshahdemo.trading.StockUIVO
 
-/**
- * @created 13/09/25 - 00:32
- * @project Zoomcar
- * @author Rohil
- * Copyright (c) 2024 Zoomcar. All rights reserved.
- */
-
 @Composable
 fun StockView(
     modifier: Modifier = Modifier,
