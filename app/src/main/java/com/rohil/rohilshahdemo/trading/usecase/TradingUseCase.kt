@@ -18,6 +18,9 @@ import javax.inject.Inject
 
 class TradingUseCase @Inject constructor() {
 
+    private val profitColor = Color(112, 155, 144)
+    private val lossColor = Color.Red
+
     fun toUiModel(initialResponse: ResponseVO?): ResponseUIVO {
         var data = ResponseUIVO(
             stockList = initialResponse?.data?.userHolding?.map {
@@ -35,8 +38,8 @@ class TradingUseCase @Inject constructor() {
                     profitLoss = profitLoss,
                     profitLossColor = when {
                         profitLoss == null -> null
-                        profitLoss < 0.0 -> Color.Red
-                        else -> Color.Green
+                        profitLoss < 0.0 -> lossColor
+                        else -> profitColor
                     }
                 )
             },
@@ -58,13 +61,13 @@ class TradingUseCase @Inject constructor() {
             bottomBarData = data.bottomBarData?.copy(
                 profitLossColor = when {
                     data.bottomBarData?.totalProfitLoss == null -> null
-                    (data.bottomBarData?.totalProfitLoss ?: 0.0) < 0.0 -> Color.Red
-                    else -> Color.Green
+                    (data.bottomBarData?.totalProfitLoss ?: 0.0) < 0.0 -> lossColor
+                    else -> profitColor
                 },
                 todayProfitLossColor = when {
                     data.bottomBarData?.todayProfitLoss == null -> null
-                    (data.bottomBarData?.todayProfitLoss ?: 0.0) < 0.0 -> Color.Red
-                    else -> Color.Green
+                    (data.bottomBarData?.todayProfitLoss ?: 0.0) < 0.0 -> lossColor
+                    else -> profitColor
                 }
             )
         )
