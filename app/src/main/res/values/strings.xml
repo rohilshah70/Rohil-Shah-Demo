@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Rohil Shah Demo</string>
+    <string name="rs_symbol">\u20B9</string>
+    <string name="toolbar_title">Upstox Holding</string>
+    <string name="ltp">LTP: </string>
+    <string name="net_qty">NET QTY:</string>
+    <string name="pl">P\u0026L:</string>
+    <string name="current_value">Current Value:</string>
+    <string name="total_investment">Total Investment:</string>
+    <string name="today_profit_loss">Today\'s Profit and Loss:</string>
+    <string name="total_profit_loss">Profit and Loss:</string>
+    <string name="error_description">Something Went wrong,\nPlease try again later</string>
+    <string name="offline_text">(no internet, showing last value)</string>
+</resources>
